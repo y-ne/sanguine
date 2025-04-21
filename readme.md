@@ -5,7 +5,7 @@
 // Path (MacOS)
 // ~/Library/Arduino15/packages/arduino/hardware/avr/[version]/boards.txt
 // change it to this
-eonardo.build.mcu=atmega32u4
+leonardo.build.mcu=atmega32u4
 leonardo.build.f_cpu=16000000L
 leonardo.build.vid=0x045E
 leonardo.build.pid=0x0039
