@@ -1,13 +1,13 @@
-#include <Keyboard.h>
-
 void setup() {
-  pinMode(2, INPUT_PULLUP);
-  Keyboard.begin();
+  Serial.begin(9600);
+  while (!Serial);
+  Serial.println("Serial Echo Ready!");
 }
 
 void loop() {
-  if (!digitalRead(2)) {
-    Keyboard.print("hello");
-    while (!digitalRead(2));
+  if (Serial.available()) {
+    String input = Serial.readStringUntil('\n');
+    Serial.print("You said: ");
+    Serial.println(input);
   }
 }
